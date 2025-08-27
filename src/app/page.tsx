@@ -72,8 +72,8 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">About Me</h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
                 I&apos;m Chris — a curious builder who likes turning ideas into things people can actually try. 
-                I bounce between AI/robotics and web apps, chasing projects that teach me something new. 
-                Photography and design sneak into my code a lot; they push me to keep interfaces simple and details thoughtful.
+                I bounce between AI and web apps, chasing projects that teach me something new. 
+                Photography and design sneak into my code a lot and they push me to keep interfaces simple and details thoughtful.
               </p>
             </div>
 
