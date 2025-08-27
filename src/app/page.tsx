@@ -22,7 +22,7 @@ export default function Home() {
             Full-Stack Developer & AI Enthusiast
           </div>
           <h1 data-reveal="slide-up" data-reveal-delay="200" className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Hey, I'm Chris
+            Hey, I&apos;m Chris
           </h1>
           <p data-reveal="slide-up" data-reveal-delay="400" className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
           I’m passionate about developing software that makes technology more accessible and useful. 
@@ -40,7 +40,7 @@ export default function Home() {
               className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 transform hover:scale-105"
               href="#contact"
             >
-              Let's Collaborate
+              Let&apos;s Collaborate
             </a>
           </div>
           <div data-reveal="slide-up" data-reveal-delay="800" className="flex justify-center items-center gap-8 mt-12 text-sm text-gray-500 dark:text-gray-400">
@@ -80,7 +80,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Development & Iteration</h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Building with clean, scalable code. Regular check-ins and iterations to ensure we're on the right track.
+                Building with clean, scalable code. Regular check-ins and iterations to ensure we&apos;re on the right track.
               </p>
             </div>
             <div className="text-center space-y-6">
@@ -129,7 +129,7 @@ export default function Home() {
                   <p className="text-gray-600 dark:text-gray-400 pb-4">
                     Developed and deployed RESTful APIs for a personalized news recommendation system using 
                     Flask within an MVC architecture. Pretrained a hybrid recommendation model combining 
-                    collaborative filtering (SVD) and content-based methods (TF-IDF) on MIND's dataset of 
+                    collaborative filtering (SVD) and content-based methods (TF-IDF) on MIND&apos;s dataset of 
                     160K+ articles, improving click-through rates. Designed scalable API endpoints, 
                     collaborated with cross-functional teams to ensure usability, and applied Git for version control and peer code reviews.
                   </p>
@@ -252,11 +252,11 @@ export default function Home() {
       >
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 data-reveal="slide-up" className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-200">
-            Let's Build Something Amazing
+            Let&apos;s Build Something Amazing
           </h2>
           <p data-reveal="slide-up" data-reveal-delay="200" className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            I'm always excited to work on new projects and collaborate with innovative teams. 
-            Whether it's a web application, AI system, or robotics project, let's bring your vision to life.
+            I&apos;m always excited to work on new projects and collaborate with innovative teams. 
+            Whether it&apos;s a web application, AI system, or robotics project, let&apos;s bring your vision to life.
           </p>
           <div data-reveal="slide-up" data-reveal-delay="400" className="flex gap-6 justify-center mt-8">
             <a
