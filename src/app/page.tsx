@@ -25,9 +25,9 @@ export default function Home() {
             Hey, I&apos;m Chris
           </h1>
           <p data-reveal="slide-up" data-reveal-delay="400" className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          I’m passionate about developing software that makes technology more accessible and useful. 
-          I aim to contribute thoughtful solutions and collaborate effectively with others. My goal is 
-          to keep growing as an engineer while delivering code that is both clean and impactful.
+            I&apos;m passionate about developing software that makes technology more accessible and useful. 
+            I aim to contribute thoughtful solutions and collaborate effectively with others. My goal is 
+            to keep growing as an engineer while delivering code that is both clean and impactful.
           </p>
           <div data-reveal="slide-up" data-reveal-delay="600" className="flex gap-4 justify-center mt-8">
             <a
@@ -56,42 +56,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Card B - Process Section */}
+      {/* Card B - About Section */}
       <section 
         className="card-section min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900 p-8"
       >
-        <div className="max-w-6xl mx-auto w-full">
+        <div className="max-w-6xl mx-auto w-full space-y-8">
           <h2 data-reveal="slide-up" className="text-5xl md:text-6xl font-bold text-center text-gray-800 dark:text-gray-200 mb-16">
-            How I Work
+            About Me
           </h2>
-          <div data-reveal="slide-up" data-reveal-delay="200" className="grid md:grid-cols-3 gap-12">
-            <div className="text-center space-y-6">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto">
-                1
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Discovery & Planning</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Understanding your vision, requirements, and goals. Researching technologies and creating a roadmap for success.
+          
+          {/* Top Row - Two Columns */}
+          <div data-reveal="slide-up" data-reveal-delay="200" className="grid md:grid-cols-2 gap-8">
+            {/* About Me Card */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">About Me</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                I&apos;m Chris — a curious builder who likes turning ideas into things people can actually try. 
+                I bounce between AI/robotics and web apps, chasing projects that teach me something new. 
+                Photography and design sneak into my code a lot; they push me to keep interfaces simple and details thoughtful.
               </p>
             </div>
-            <div className="text-center space-y-6">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto">
-                2
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Development & Iteration</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Building with clean, scalable code. Regular check-ins and iterations to ensure we&apos;re on the right track.
-              </p>
+
+            {/* Quick Facts Card */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">Quick Facts</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-l">●</span>
+                  <span className="text-gray-600 dark:text-gray-400">Studied Computer Engineering @ UC Irvine</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-l">●</span>
+                  <span className="text-gray-600 dark:text-gray-400">Interested in AI, robotics, and web development</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-l">●</span>
+                  <span className="text-gray-600 dark:text-gray-400">Enjoys photography and digital design</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-l">●</span>
+                  <span className="text-gray-600 dark:text-gray-400">Probably working with a coffee nearby</span>
+                </li>
+              </ul>
             </div>
-            <div className="text-center space-y-6">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto">
-                3
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Launch & Support</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Deploying your solution and providing ongoing support. Ensuring everything runs smoothly and efficiently.
-              </p>
-            </div>
+          </div>
+
+          {/* Bottom Row - Full Width */}
+          <div data-reveal="slide-up" data-reveal-delay="400" className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">My Journey</h3>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              I started out tinkering with small projects like training a model to recognize hand gestures, 
+              and that curiosity grew into larger projects like a personalized news recommender system and 
+              an autonomous tour car. Along the way, I&apos;ve explored both frontend design and backend engineering, 
+              and I&apos;m excited about opportunities where I can bring those worlds together.
+            </p>
           </div>
         </div>
       </section>
