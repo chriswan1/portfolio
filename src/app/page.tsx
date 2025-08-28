@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useScrollReveal, useCardFadeOut } from "./useScrollReveal";
+import { RingShowcase } from "./components/RingShowcase";
 
 export default function Home() {
   useScrollReveal({ 
@@ -259,6 +260,22 @@ export default function Home() {
                 </div>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Card C2 - 3D Interactive Project Showcase */}
+      <section 
+        className="card-section min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 p-8"
+      >
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="text-center mb-16">
+            <h2 data-reveal="slide-up" className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+              Project Showcase
+            </h2>
+          </div>
+          <div data-reveal="slide-up" data-reveal-delay="400" className="w-full h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+            <RingShowcase />
           </div>
         </div>
       </section>
