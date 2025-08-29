@@ -85,11 +85,6 @@ export function RingShowcase() {
           onClose={handleClosePreview}
         />
       )}
-
-      {/* Instructions */}
-      <div className="absolute bottom-4 left-4 text-white text-sm bg-black/30 px-3 py-2 rounded-lg">
-        <p>Hover to preview • Click to view details</p>
-      </div>
     </div>
   );
 }
