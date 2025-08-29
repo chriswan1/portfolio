@@ -53,15 +53,15 @@ export function RingShowcase() {
               const z = Math.sin(angle) * radius;
               
               return (
-                                 <ProjectCard
-                   key={project.id}
-                   project={project}
-                   position={[x, 0, z]}
-                   rotation={[0, -angle, 0]}
-                   isHovered={hoveredProject === project.id}
-                   onHover={handleProjectHover}
-                   onClick={handleProjectClick}
-                 />
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  position={[x, 0, z]}
+                  rotation={[0, -angle + Math.PI / 2, 0]}
+                  isHovered={hoveredProject === project.id}
+                  onHover={handleProjectHover}
+                  onClick={handleProjectClick}
+                />
               );
             })}
           </group>
@@ -69,11 +69,13 @@ export function RingShowcase() {
           <OrbitControls 
             enableZoom={false}
             enablePan={false}
-            enableRotate={false}
+            enableRotate={true}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
             autoRotate={true}
             autoRotateSpeed={0.5}
+            dampingFactor={0.05}
+            enableDamping={true}
           />
         </Suspense>
       </Canvas>
