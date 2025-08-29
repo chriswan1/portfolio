@@ -128,7 +128,7 @@ export default function Home() {
         className="card-section min-h-screen flex items-center justify-center p-8 relative"
       >
         <div className="max-w-4xl mx-auto w-full">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 mt-7">
             <h2 data-reveal="slide-up" className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-4">
               Featured Projects
             </h2>
