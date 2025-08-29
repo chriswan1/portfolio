@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useScrollReveal, useCardFadeOut } from "./useScrollReveal";
+import { useScrollReveal, useCardFadeOut, useScrollGradient } from "./useScrollReveal";
 import { RingShowcase } from "./components/RingShowcase";
 
 export default function Home() {
@@ -11,12 +11,19 @@ export default function Home() {
   });
   
   useCardFadeOut();
+  const gradientRef = useScrollGradient();
 
   return (
-    <div className="font-sans">
+    <div className="font-sans relative">
+      {/* Dynamic scroll-based gradient background */}
+      <div 
+        ref={gradientRef}
+        className="fixed inset-0 bg-gradient-to-b from-blue-50 via-indigo-50 via-purple-50 via-pink-50 via-orange-50 to-red-50 dark:from-gray-900 dark:via-gray-800 dark:via-gray-900 dark:via-gray-800 dark:via-gray-900 dark:to-gray-800 -z-10 transition-all duration-1000"
+      ></div>
+      
       {/* Card A - Hero Section */}
       <section 
-        className="card-section min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-8"
+        className="card-section min-h-screen flex flex-col items-center justify-center p-8 relative"
       >
         <div className="text-center space-y-6 max-w-4xl mx-auto">
           <div data-reveal="slide-up" data-reveal-delay="100" className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
@@ -59,7 +66,7 @@ export default function Home() {
 
       {/* Card B - About Section */}
       <section 
-        className="card-section min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900 p-8"
+        className="card-section min-h-screen flex items-center justify-center p-8 relative"
       >
         <div className="max-w-6xl mx-auto w-full space-y-8">
           <h2 data-reveal="slide-up" className="text-5xl md:text-6xl font-bold text-center text-gray-800 dark:text-gray-200 mb-16">
@@ -69,7 +76,7 @@ export default function Home() {
           {/* Top Row - Two Columns */}
           <div data-reveal="slide-up" data-reveal-delay="200" className="grid md:grid-cols-2 gap-8">
             {/* About Me Card */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">About Me</h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
                 I&apos;m Chris — a curious builder who likes turning ideas into things people can actually try. 
@@ -79,7 +86,7 @@ export default function Home() {
             </div>
 
             {/* Quick Facts Card */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">Quick Facts</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -103,7 +110,7 @@ export default function Home() {
           </div>
 
           {/* Bottom Row - Full Width */}
-          <div data-reveal="slide-up" data-reveal-delay="400" className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div data-reveal="slide-up" data-reveal-delay="400" className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
             <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">My Journey</h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
               I started out tinkering with small projects like training a model to recognize hand gestures, 
@@ -118,7 +125,7 @@ export default function Home() {
       {/* Card C - Projects Section */}
       <section 
         id="projects"
-        className="card-section min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800 p-8"
+        className="card-section min-h-screen flex items-center justify-center p-8 relative"
       >
         <div className="max-w-4xl mx-auto w-full">
           <div className="text-center mb-16">
@@ -130,7 +137,7 @@ export default function Home() {
             </p>
           </div>
           <div data-reveal-group className="space-y-8">
-            <article data-reveal="slide-up" className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <article data-reveal="slide-up" className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="flex flex-col">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Personalized News System</h3>
@@ -156,7 +163,7 @@ export default function Home() {
               </div>
             </article>
             
-            <article data-reveal="slide-up" className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <article data-reveal="slide-up" className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="flex flex-col">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Photography Portfolio</h3>
@@ -181,7 +188,7 @@ export default function Home() {
               </div>
             </article>
             
-            <article data-reveal="slide-up" className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <article data-reveal="slide-up" className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="flex flex-col">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Library Management System</h3>
@@ -207,7 +214,7 @@ export default function Home() {
               </div>
             </article>
             
-            <article data-reveal="slide-up" className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <article data-reveal="slide-up" className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="flex flex-col">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">CKI Website</h3>
@@ -233,7 +240,7 @@ export default function Home() {
               </div>
             </article>
             
-            <article data-reveal="slide-up" className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <article data-reveal="slide-up" className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="flex flex-col">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Automated Tour Guide Car</h3>
@@ -266,7 +273,7 @@ export default function Home() {
 
       {/* Card C2 - 3D Interactive Project Showcase */}
       <section 
-        className="card-section min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 p-8"
+        className="card-section min-h-screen flex items-center justify-center p-8 relative"
       >
         <div className="max-w-6xl mx-auto w-full">
           <div className="text-center mb-16">
@@ -283,7 +290,7 @@ export default function Home() {
       {/* Card D - Contact Section */}
       <section 
         id="contact"
-        className="card-section min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-red-100 dark:from-gray-800 dark:to-gray-900 p-8"
+        className="card-section min-h-screen flex items-center justify-center p-8 relative"
       >
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 data-reveal="slide-up" className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-200">
@@ -324,7 +331,7 @@ export default function Home() {
               LinkedIn
             </a>
           </div>
-          <div data-reveal="slide-up" data-reveal-delay="600" className="mt-12 p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg">
+          <div data-reveal="slide-up" data-reveal-delay="600" className="mt-12 p-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg">
             <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">Technical Expertise</h3>
             <div className="grid md:grid-cols-3 gap-8 text-left">
               <div>
