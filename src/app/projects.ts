@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     id: "news-system",
     title: "Personalized News System",
-    href: "#projects",
+    href: "https://github.com/chriswan1/news-recommender",
     thumbnail: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzRBOTBFMiIvPjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TmV3cyBBSTwvdGV4dD48L3N2Zz4=",
     preview: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iIzRBOTBFMiIvPjx0ZXh0IHg9IjMwMCIgeT0iMjAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzIiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UGVyc29uYWxpemVkIE5ld3M8L3RleHQ+PC9zdmc+",
     description: "Developed and deployed RESTful APIs for a personalized news recommendation system using Flask within an MVC architecture. Pretrained a hybrid recommendation model combining collaborative filtering (SVD) and content-based methods (TF-IDF) on MIND's dataset of 160K+ articles, improving click-through rates.",

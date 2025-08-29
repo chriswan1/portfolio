@@ -131,12 +131,12 @@ export function PreviewPanel({ project, onClose }: PreviewPanelProps) {
                 >
                   View Project
                 </button>
-                <button
+                {/* <button
                   onClick={handleClose}
                   className="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium"
                 >
                   Close
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
