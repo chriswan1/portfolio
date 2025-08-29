@@ -29,7 +29,7 @@ export function RingShowcase() {
     : null;
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-full">
       {/* 3D Canvas */}
       <Canvas
         camera={{ position: [0, 0, 8], fov: 60 }}
@@ -53,22 +53,23 @@ export function RingShowcase() {
               const z = Math.sin(angle) * radius;
               
               return (
-                <ProjectCard
-                  key={project.id}
-                  project={project}
-                  position={[x, 0, z]}
-                  rotation={[0, -angle, 0]}
-                  isHovered={hoveredProject === project.id}
-                  onHover={handleProjectHover}
-                  onClick={handleProjectClick}
-                />
+                                 <ProjectCard
+                   key={project.id}
+                   project={project}
+                   position={[x, 0, z]}
+                   rotation={[0, -angle, 0]}
+                   isHovered={hoveredProject === project.id}
+                   onHover={handleProjectHover}
+                   onClick={handleProjectClick}
+                 />
               );
             })}
           </group>
           
           <OrbitControls 
-            enableZoom={true}
+            enableZoom={false}
             enablePan={false}
+            enableRotate={false}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
             autoRotate={true}
@@ -86,8 +87,8 @@ export function RingShowcase() {
       )}
 
       {/* Instructions */}
-      <div className="absolute bottom-4 left-4 text-white text-sm bg-black/50 px-3 py-2 rounded-lg">
-        <p>Hover over cards to preview • Click to view details</p>
+      <div className="absolute bottom-4 left-4 text-white text-sm bg-black/30 px-3 py-2 rounded-lg">
+        <p>Hover to preview • Click to view details</p>
       </div>
     </div>
   );

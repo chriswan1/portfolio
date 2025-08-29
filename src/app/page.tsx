@@ -274,7 +274,7 @@ export default function Home() {
               Project Showcase
             </h2>
           </div>
-          <div data-reveal="slide-up" data-reveal-delay="400" className="w-full h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+          <div data-reveal="slide-up" data-reveal-delay="400" className="w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
             <RingShowcase />
           </div>
         </div>

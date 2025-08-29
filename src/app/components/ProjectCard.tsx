@@ -30,19 +30,17 @@ export function ProjectCard({
   // Create a simple colored texture for the project
   const texture = useTexture(project.thumbnail);
   
-  // Spring animations
+  // Spring animations - more subtle for seamless flow
   const { scale, position: animatedPosition } = useSpring({
-    scale: isHovered ? 1.2 : 1,
+    scale: isHovered ? 1.05 : 1,
     position: isHovered 
-      ? [position[0] * 1.3, position[1] + 0.5, position[2] * 1.3] as [number, number, number]
+      ? [position[0] * 1.1, position[1] + 0.2, position[2] * 1.1] as [number, number, number]
       : position,
-    config: { mass: 1, tension: 280, friction: 60 }
+    config: { mass: 1, tension: 200, friction: 40 }
   });
 
-  // Calculate rotation
-  const currentRotation = isHovered 
-    ? [0, rotation[1], 0] as [number, number, number]
-    : rotation;
+  // Calculate rotation - keep original rotation for seamless flow
+  const currentRotation = rotation;
 
   // Idle animation
   useFrame((state) => {
@@ -136,14 +134,14 @@ export function ProjectCard({
         {project.category}
       </Text>
 
-      {/* Hover Glow Effect */}
+      {/* Subtle hover effect */}
       {isHovered && (
         <mesh position={[0, 0, -0.01]}>
           <planeGeometry args={[1.6, 1.1]} />
           <meshBasicMaterial
             color="#4A90E2"
             transparent
-            opacity={0.2}
+            opacity={0.1}
             side={THREE.DoubleSide}
           />
         </mesh>
