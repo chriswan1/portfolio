@@ -34,8 +34,7 @@ export default function Home() {
           </h1>
           <p data-reveal="slide-up" data-reveal-delay="400" className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
             I&apos;m passionate about developing software that makes technology more accessible and useful. 
-            I aim to contribute thoughtful solutions and collaborate effectively with others. My goal is 
-            to keep growing as an engineer while delivering code that is both clean and impactful.
+            I aim to keep growing as an engineer and deliver code that is impactful.
           </p>
           <div data-reveal="slide-up" data-reveal-delay="600" className="flex gap-4 justify-center mt-8">
             <a
